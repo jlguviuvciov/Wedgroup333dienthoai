@@ -199,43 +199,16 @@
     color: #666;
   }
 
-  /* 👉 Phóng to giao diện khi dùng trên điện thoại */
+  /* 👉 Phóng to toàn bộ giao diện trên điện thoại */
   @media (max-width: 768px) {
-    body {
-      font-size: 20px;
-    }
-
-    input,
-    button,
-    textarea {
-      font-size: 18px;
-      padding: 12px;
-    }
-
-    .logo {
-      font-size: 24px;
-    }
-
-    .menu button {
-      font-size: 18px;
-      padding: 14px;
-    }
-
-    .menu-toggle {
-      font-size: 32px;
-    }
-
-    h2 {
-      font-size: 24px;
-    }
-
-    .notice-item,
-    .text-item,
-    .image-item {
-      font-size: 18px;
+    html, body {
+      transform: scale(1.4);
+      transform-origin: top left;
+      width: 100%;
+      overflow-x: hidden;
     }
   }
-  </style>
+</style>
 </head>
 <body>
 

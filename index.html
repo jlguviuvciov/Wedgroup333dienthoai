@@ -16,27 +16,26 @@
 
   .header {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
     background: linear-gradient(to right, #fde4f2, #d6e4f9);
   }
 
   .logo {
     font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 20px;
   }
 
   .search-box {
-    width: 100%;
+    position: relative;
   }
 
   .search-box input {
     padding: 8px;
     border-radius: 8px;
     border: 1px solid #ccc;
-    width: 100%;
+    width: 200px;
     background-color: #b6f7b0;
   }
 
@@ -66,8 +65,6 @@
   .menu-toggle {
     font-size: 24px;
     cursor: pointer;
-    align-self: flex-end;
-    margin-top: 10px;
   }
 
   .divider {
@@ -83,9 +80,8 @@
   }
 
   .menu button {
-    width: 100%;
-    margin: 8px 0;
-    padding: 10px;
+    margin: 5px;
+    padding: 10px 20px;
     border: none;
     border-radius: 12px;
     background-color: #fcb1d1;
@@ -100,7 +96,7 @@
 
   .section {
     display: none;
-    padding: 10px;
+    padding: 20px;
   }
 
   .section.active {
@@ -112,7 +108,7 @@
     display: block;
     margin: 5px auto;
     padding: 8px;
-    width: 90%;
+    width: 300px;
     border-radius: 8px;
     border: 1px solid #ccc;
   }
@@ -123,7 +119,6 @@
     border-radius: 8px;
     background: #a1c4fd;
     cursor: pointer;
-    margin-top: 10px;
   }
 
   .notice-item,
@@ -132,15 +127,20 @@
     background: #fff;
     margin: 5px auto;
     padding: 10px;
-    width: 95%;
+    width: 80%;
     border-radius: 8px;
     cursor: pointer;
+  }
+
+  #loginArea {
+    text-align: center;
+    padding: 20px;
   }
 
   #loginArea input {
     margin: 5px;
     padding: 8px;
-    width: 90%;
+    width: 200px;
     border-radius: 8px;
     border: 1px solid #ccc;
   }
@@ -151,7 +151,6 @@
     border-radius: 8px;
     background: #fcb1d1;
     cursor: pointer;
-    margin-top: 10px;
   }
 
   .error {
@@ -161,9 +160,11 @@
 
   #imageOverlay {
     position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
     display: none;
     justify-content: center;
     align-items: center;
@@ -196,6 +197,43 @@
     font-size: 18px;
     cursor: pointer;
     color: #666;
+  }
+
+  /* 👉 Phóng to giao diện khi dùng trên điện thoại */
+  @media (max-width: 768px) {
+    body {
+      font-size: 20px;
+    }
+
+    input,
+    button,
+    textarea {
+      font-size: 18px;
+      padding: 12px;
+    }
+
+    .logo {
+      font-size: 24px;
+    }
+
+    .menu button {
+      font-size: 18px;
+      padding: 14px;
+    }
+
+    .menu-toggle {
+      font-size: 32px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    .notice-item,
+    .text-item,
+    .image-item {
+      font-size: 18px;
+    }
   }
   </style>
 </head>
